@@ -36,4 +36,8 @@
 			$form.find('input:hidden[name=_method]').remove();
 		});
 	}
+	$.deleteResource = function (url, cb)
+	{
+		$.post(url, {'_method': 'delete'}, cb);
+	}
 })(jQuery);
